@@ -7,7 +7,6 @@
 // }
 // console.log(person.name)
 
-import { error } from "console"
 
 
 // //Strings
@@ -54,24 +53,45 @@ import { error } from "console"
 
 
 //void return value type
-function hiUser (username:string):void{
-    console.log(`hi ${username} welcome to my repo`)
+// function hiUser (username:string):void{
+//     console.log(`hi ${username} welcome to my repo`)
+// }
+// hiUser("mina")
+
+// //never type  
+// //1- a function that always throw an error
+// //2- a function that has an infinite loop
+// //3- a variable that can never have a value
+
+// function throwError(msg:string):never{
+//     throw new Error(msg)
+// }
+// function infiniteLoop():never{
+//     while(true){
+
+//     }
+// }
+
+// let x:never;
+// x= infiniteLoop();
+
+
+
+
+//Array types
+const numbers:number[] = [1,2,3,4,5]
+const strings:string[]=["one","two","three"]
+strings.push('mina') //you can push only strings
+
+//multi dimentional array
+const marix: number[][]= [[1,2,3], [2,3,4]]
+console.table(marix)
+
+//objects 
+const person: {firstname:string ; lastnsme:string; age:number }={
+    firstname:"mina",
+    lastnsme:"isaac",
+    age:23
 }
-hiUser("mina")
+console.table(person)
 
-//never type  
-//1- a function that always throw an error
-//2- a function that has an infinite loop
-//3- a variable that can never have a value
-
-function throwError(msg:string):never{
-    throw new Error(msg)
-}
-function infiniteLoop():never{
-    while(true){
-
-    }
-}
-
-let x:never;
-x= infiniteLoop();
