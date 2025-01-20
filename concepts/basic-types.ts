@@ -7,6 +7,7 @@ const person:Person = {
 }
 console.log(person.name)
 
+
 //Strings
 let myName:string= 'mina isaac'
 // numbers 
@@ -20,3 +21,10 @@ let car = 'mersycide'
 let favnumber = 9
 //you can't assign it to different type now
 //favnumber = 'mina'  this errors 
+
+
+
+//any type
+let color:any = 'green'
+color = 20 //no error happens
+//color();  // this will error only if you run code
