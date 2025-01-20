@@ -7,6 +7,8 @@
 // }
 // console.log(person.name)
 
+import { error } from "console"
+
 
 // //Strings
 // let myName:string= 'mina isaac'
@@ -32,20 +34,44 @@
 
 //function parameters  
 //normal function
-function AddOne (half:number , anotherHalf:number){
-    return half+anotherHalf
-}
-console.log(AddOne(3,3));  // prints 6 
+// function AddOne (half:number , anotherHalf:number){
+//     return half+anotherHalf
+// }
+// console.log(AddOne(3,3));  // prints 6 
 
-//arrow function
-const double= (x:number) =>{
-    return 2*x
-}
-console.log(double(2))     //prints 4  and you can not path it more then 1 parameter
+// //arrow function
+// const double= (x:number) =>{
+//     return 2*x
+// }
+// console.log(double(2))     //prints 4  and you can not path it more then 1 parameter
 
-function Greet (person:string = 'mina'):boolean{
-    console.log('hello',person)
-    return true
-}
-Greet();  //you can annotate the return value type
+// function Greet (person:string = 'mina'):boolean{
+//     console.log('hello',person)
+//     return true
+// }
+// Greet();  //you can annotate the return value type
 
+
+
+//void return value type
+function hiUser (username:string):void{
+    console.log(`hi ${username} welcome to my repo`)
+}
+hiUser("mina")
+
+//never type  
+//1- a function that always throw an error
+//2- a function that has an infinite loop
+//3- a variable that can never have a value
+
+function throwError(msg:string):never{
+    throw new Error(msg)
+}
+function infiniteLoop():never{
+    while(true){
+
+    }
+}
+
+let x:never;
+x= infiniteLoop();
