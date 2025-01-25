@@ -141,14 +141,30 @@
 
 
 
-//unions
-let password:number|string;
-password=1234
-password="mina1234"
+// //unions
+// let password:number|string;
+// password=1234
+// password="mina1234"
 
 
 
-//literal types
-let color:"red"|"blue"|"black";
-color="red";
-// color="green" // this errors because it is not in the list
+// //literal types
+// let color:"red"|"blue"|"black";
+// color="red";
+// // color="green" // this errors because it is not in the list
+
+
+
+//tuples  array with fixed number of elements and fixed structure
+let mytuple:[string,number]= ["hello", 12345];
+let [first,second]=mytuple;  // destructioning
+console.log(first)
+console.log(second)
+
+//Enums 
+enum weatherCondition {
+    Sunny,
+    Cloudy="cloudy"
+}
+console.table(weatherCondition.Cloudy)
+
