@@ -155,16 +155,41 @@
 
 
 
-//tuples  array with fixed number of elements and fixed structure
-let mytuple:[string,number]= ["hello", 12345];
-let [first,second]=mytuple;  // destructioning
-console.log(first)
-console.log(second)
+// //tuples  array with fixed number of elements and fixed structure
+// let mytuple:[string,number]= ["hello", 12345];
+// let [first,second]=mytuple;  // destructioning
+// console.log(first)
+// console.log(second)
 
-//Enums 
-enum weatherCondition {
-    Sunny,
-    Cloudy="cloudy"
+// //Enums 
+// enum weatherCondition {
+//     Sunny,
+//     Cloudy="cloudy"
+// }
+// console.table(weatherCondition.Cloudy)
+
+
+
+
+//class properties annotations
+class Person {
+   private  name:string;
+   public age:number;
+   protected password:string;
+    constructor(name:string,age:number,password:string){
+        this.name =name;
+        this.age = age;
+        this.password= password;
+    }
+    getName():string{
+        return `your name is ${this.name} and your age is ${this.age} and your pass is ${this.password}`
+    }
 }
-console.table(weatherCondition.Cloudy)
+
+const person = new Person("john", 17,"mina1234")
+console.log(person.getName());
+//console.log(person.name) //this error
+
+
+
 
