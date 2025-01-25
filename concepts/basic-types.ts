@@ -98,18 +98,42 @@
 
 
 // type Aliases
-type Person = {
+// type Person = {
+//     name:string;
+//     age:number;
+//     email?:string;
+//     readonly location:string;
+// }
+// const person:Person={
+//     name:"mina",
+//     age:23,
+//     location:"Egypt"
+// }
+// //person.location='mina'  // we can't do this as it is a read only 
+
+// console.table(person)
+
+
+
+// intersection types 
+
+
+type person = {
     name:string;
     age:number;
-    email?:string;
-    readonly location:string;
 }
-const person:Person={
+type employee = {
+    id:number;
+    role:string;
+} 
+
+type PersonandEmployee = person&employee;
+
+const person:PersonandEmployee = {
+    id:1900426,
     name:"mina",
-    age:23,
-    location:"Egypt"
+    age:17,
+    role:"engineer"
 }
-//person.location='mina'  // we can't do this as it is a read only 
 
 console.table(person)
-
