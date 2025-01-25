@@ -79,19 +79,37 @@
 
 
 //Array types
-const numbers:number[] = [1,2,3,4,5]
-const strings:string[]=["one","two","three"]
-strings.push('mina') //you can push only strings
+// const numbers:number[] = [1,2,3,4,5]
+// const strings:string[]=["one","two","three"]
+// strings.push('mina') //you can push only strings
 
-//multi dimentional array
-const marix: number[][]= [[1,2,3], [2,3,4]]
-console.table(marix)
+// //multi dimentional array
+// const marix: number[][]= [[1,2,3], [2,3,4]]
+// console.table(marix)
 
 //objects 
-const person: {firstname:string ; lastnsme:string; age:number }={
-    firstname:"mina",
-    lastnsme:"isaac",
-    age:23
+// const person: {firstname:string ; lastnsme:string; age:number }={
+//     firstname:"mina",
+//     lastnsme:"isaac",
+//     age:23
+// }
+// console.table(person)
+
+
+
+// type Aliases
+type Person = {
+    name:string;
+    age:number;
+    email?:string;
+    readonly location:string;
 }
+const person:Person={
+    name:"mina",
+    age:23,
+    location:"Egypt"
+}
+//person.location='mina'  // we can't do this as it is a read only 
+
 console.table(person)
 
