@@ -118,22 +118,37 @@
 // intersection types 
 
 
-type person = {
-    name:string;
-    age:number;
-}
-type employee = {
-    id:number;
-    role:string;
-} 
+// type person = {
+//     name:string;
+//     age:number;
+// }
+// type employee = {
+//     id:number;
+//     role:string;
+// } 
 
-type PersonandEmployee = person&employee;
+// type PersonandEmployee = person&employee;
 
-const person:PersonandEmployee = {
-    id:1900426,
-    name:"mina",
-    age:17,
-    role:"engineer"
-}
+// const person:PersonandEmployee = {
+//     id:1900426,
+//     name:"mina",
+//     age:17,
+//     role:"engineer"
+// }
 
-console.table(person)
+// console.table(person)
+
+
+
+
+//unions
+let password:number|string;
+password=1234
+password="mina1234"
+
+
+
+//literal types
+let color:"red"|"blue"|"black";
+color="red";
+// color="green" // this errors because it is not in the list
